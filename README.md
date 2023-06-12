@@ -12,21 +12,21 @@ Before running the script, ensure that you have the following:
 
 ## Installation
 
-1. Clone the repository:
+1. Clone the repository
 
-```python 
+```
 git clone https://github.com/dev-alt/gpt-rewriteCSS.git
 ```
 
 2. Install the required Python packages:
 
-```python 
+```
 pip install dotenv openai
 ```
 
 3. Create a `.env` file in the root directory of the repository and add your OpenAI API key:
 
-```python 
+```
 OPENAI_API_KEY=your_api_key_here
 ```
 
@@ -36,7 +36,7 @@ OPENAI_API_KEY=your_api_key_here
 
 2. Run the script:
 
-```python 
+```
 python script.py
 ```
 
