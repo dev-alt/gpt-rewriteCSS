@@ -4,11 +4,17 @@ import openai
 from openai import Completion
 import time
 
-# Load the environment variables from the .env file
-load_dotenv()
 
-# Set the OpenAI API key from the environment variable
-openai.api_key = os.getenv('OPENAI_API_KEY')
+# Load the environment variables from the .env file
+def load_environment_variables():
+    try:
+        load_dotenv()
+    except Exception as e:
+        print(f"Error loading environment variables: {str(e)}")
+        raise
+    
+    # Set the OpenAI API key from the environment variable
+    openai.api_key = os.getenv('OPENAI_API_KEY')
 
 # Counter variable to track API calls
 api_call_counter = 0
@@ -50,6 +56,9 @@ def process_user_input(user_input):
     return None
 
 def main():
+        # Load environment variables
+    load_environment_variables()
+
     with open('styles.css', 'r') as file:
         css_code = file.read()
 
