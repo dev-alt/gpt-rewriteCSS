@@ -49,9 +49,6 @@ def process_user_input(user_input):
 
     return None
 
-if __name__ == '__main__':
-    main()
-    
 def main():
     with open('styles.css', 'r') as file:
         css_code = file.read()
@@ -107,3 +104,6 @@ def main():
 
     # Print the number of API calls made
     print(f"Number of API calls made: {api_call_counter}")
+    
+if __name__ == '__main__':
+    main()
